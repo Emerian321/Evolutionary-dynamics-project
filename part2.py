@@ -1,7 +1,5 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.ticker import AutoMinorLocator
-import seaborn as sns
+
 
 import egttools as egt
 

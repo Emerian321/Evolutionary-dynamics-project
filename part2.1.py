@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 from part2 import *
 
 Z = 100
