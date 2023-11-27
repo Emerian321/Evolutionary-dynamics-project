@@ -11,13 +11,13 @@ A = np.array([
 ])
 
 
-strategies = [egt.behaviors.NormalForm.TwoActions.TFT(), 
-              egt.behaviors.NormalForm.TwoActions.Defector()]
+strategies = [egt.behaviors.NormalForm.TwoActions.TFT(), egt.behaviors.NormalForm.TwoActions.Defector()]
 
 nb_rounds = 100
 
 game = egt.games.NormalFormGame(nb_rounds, A, strategies)
 
+print(game.expected_payoffs())
 
 
 Z = 50
@@ -30,7 +30,7 @@ nb_runs = 10
 evolver = egt.numerical.PairwiseComparisonNumerical(Z, game, 100000)
 
 sd = evolver.estimate_stationary_distribution_sparse(nb_runs, nb_generations, transitory, beta, mu)
-print(sd)
+print(sd.toarray()[0])
 sns.set_context("notebook", rc={"lines.linewidth": 3, "axes.linewidth": 3})
 
 fix, ax = plt.subplots(figsize=(8, 5))
