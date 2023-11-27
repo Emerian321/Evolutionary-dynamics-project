@@ -32,7 +32,7 @@ game = egt.games.NormalFormGame(R, payoff_matrix, strategies)
 A = game.expected_payoffs()
 
 sd = pip.estimate_stationary_distribution(nb_runs, transitory, nb_generations, beta, mu, Z, A)
-print(sum(sd))
+
 fix, ax = plt.subplots(figsize=(8, 5))
 
 ax.plot(np.arange(0, Z+1), sd)
