@@ -1,6 +1,5 @@
 import numpy as np
 
-
 import egttools as egt
 
 from egttools.plotting.simplified import plot_replicator_dynamics_in_simplex
